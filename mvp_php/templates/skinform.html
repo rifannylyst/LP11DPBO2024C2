@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pasien</title>
+</head>
+<body>
+    <h2>Form Pasien</h2>
+
+    <!-- Form for adding data -->
+    <h3>Tambah Data Pasien</h3>
+    <form action="aksi_tambah.php" method="POST">
+        <input type="text" name="nik" placeholder="NIK" required><br>
+        <input type="text" name="nama" placeholder="Nama" required><br>
+        <!-- Add additional fields for tempat, tanggal lahir, gender, email, and telepon -->
+        <button type="submit">Tambah Pasien</button>
+    </form>
+
+    <!-- Form for editing data -->
+    <h3>Edit Data Pasien</h3>
+    <form action="aksi_edit.php" method="POST">
+        <select name="id" required>
+            <!-- Options for selecting a patient to edit -->
+            <!-- Data for options will be fetched from the database -->
+        </select><br>
+        <!-- Display selected patient data for editing -->
+        <input type="text" name="nik" placeholder="NIK" required><br>
+        <input type="text" name="nama" placeholder="Nama" required><br>
+        <!-- Add additional fields for tempat, tanggal lahir, gender, email, and telepon -->
+        <button type="submit">Simpan Perubahan</button>
+    </form>
+
+    <!-- Table to display patient data -->
+    <h3>Daftar Pasien</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>NIK</th>
+                <th>Nama</th>
+                <!-- Columns for tempat, tanggal lahir, gender, email, and telepon -->
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Display patient data from the database -->
+            <!-- Each row will have buttons for edit and delete -->
+        </tbody>
+    </table>
+</body>
+</html>
